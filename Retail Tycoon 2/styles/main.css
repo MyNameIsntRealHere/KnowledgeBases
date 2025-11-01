@@ -1,14 +1,17 @@
 /* --------------------------------------------------------------
    ROOT VARIABLES
 -------------------------------------------------------------- */
+
 :root {
   --bg: #222020;
   --accent: #009DFF;
 }
 
+
 /* --------------------------------------------------------------
    GENERAL PAGE SETUP
 -------------------------------------------------------------- */
+
 body {
   margin: 0;
   font-family: "Sansation", system-ui, sans-serif;
@@ -16,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 a {
@@ -29,9 +32,11 @@ a:hover {
   cursor: pointer;
 }
 
+
 /* --------------------------------------------------------------
    HEADER (DESKTOP)
 -------------------------------------------------------------- */
+
 header {
   position: fixed;
   top: 0;
@@ -78,12 +83,14 @@ header {
 }
 
 .headerbutton:hover {
-  background: var(--bg);
+  border-color: var(--accent);
 }
+
 
 /* --------------------------------------------------------------
    HEADER (MOBILE)
 -------------------------------------------------------------- */
+
 .menu-toggle {
   display: none;
   background: none;
@@ -121,7 +128,7 @@ header {
 #sidebar {
   position: relative;
   width: 28vw;
-  background: #111;
+  background: var(--bg);
   color: white;
   border-right: 3px solid var(--accent);
   padding: 10px;
@@ -157,11 +164,13 @@ summary:hover {
 li {
   font-size: 20px;
   color: #FFFFFF;
+  padding-bottom: 9px;
 }
 
 li:hover {
   color: var(--accent);
   text-decoration: underline;
+  cursor: pointer;
 }
 
 /* --------------------------------------------------------------
@@ -170,11 +179,11 @@ li:hover {
 @media (max-width: 800px) {
   #sidebar {
     position: fixed;
-    top: 80px;
+    top: 90px;
     left: 0;
     width: 250px;
     height: calc(100% - 80px);
-    background: #111;
+    background: var(--bg);
     transform: translateX(-100%);
     z-index: 1000;
   }
@@ -194,23 +203,36 @@ li:hover {
   }
 
   #sidebar .headerbutton {
-    background: var(--accent);
-    color: white;
-    border: none;
+    background: #000000;
+    border: 4px solid #111;
+    color: #FFFFFF;
     padding: 8px 12px;
-    border-radius: 5px;
+    margin: 0 0.5vw;
     cursor: pointer;
-    text-align: left;
+    border-radius: 8px;
+    font-size: 25px;
+    font-weight: bold;
     width: 100%;
   }
 
-  /* Dim background when sidebar is open */
-  body.sidebar-open::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+  h3 {
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: bold;
+  }
+
+  summary {
+  font-size: 20px;
+  padding-top: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+  }
+
+  li {
+    font-size: 15px;
+    color: #FFFFFF;
+    padding-bottom: 9px;
   }
 }
 
@@ -283,24 +305,11 @@ main {
   overflow: hidden;
 }
 
-.ContentUimg {
-  width: 25%;
-  font-size: 20px;
-  color: #FFFFFF;
-}
-
-.ContentWquick {
-  width: 60%;
-  padding-left: 10px;
-}
-
-.Quickbox {
-  width: 40%;
-}
 
 /* --------------------------------------------------------------
    MAIN CONTENT (MOBILE)
 -------------------------------------------------------------- */
+
 @media (max-width: 800px) {
   .container {
     flex-direction: column;
@@ -308,6 +317,23 @@ main {
 
   main {
     padding: 15px;
+  }
+
+  .ContentTitle {
+    font-size: 50px;
+  }
+
+  .ContentBetweenTitle {
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 40px;
+  }
+
+  .ContentFull,.ContentWimg{
+    font-size: 16px
   }
 
   .ContentRow {
@@ -319,15 +345,13 @@ main {
   .ContentIMGcontainer {
     width: 100%;
   }
-
-  .ContentTitle {
-    font-size: 50px;
-  }
 }
+
 
 /* --------------------------------------------------------------
    TABLE STYLING
 -------------------------------------------------------------- */
+
 .ContentTable {
   width: 100%;
   border-collapse: separate;
@@ -370,9 +394,24 @@ main {
   color: #FFFFFF;
 }
 
+@media (max-width: 800px) {
+  .TableHead{
+    font-size: 20px;
+  }
+
+  .TableChild{
+    font-size: 16px;
+  }
+
+  .ContentUTable{
+    font-size: 14px;
+  }
+}
+
 /* --------------------------------------------------------------
    FAQ BUTTONS
 -------------------------------------------------------------- */
+
 .faq-buttons {
   display: flex;
   flex-wrap: wrap;
