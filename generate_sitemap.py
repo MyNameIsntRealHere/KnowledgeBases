@@ -1,60 +1,41 @@
 import os
+import urllib.parse
 
-# === CONFIGURATION ===
-BASE_URL = "https://mynameisntrealhere.github.io/KnowledgeBases"  # <-- change this
-ROOT_FOLDER = "."  # Path to your repo root
+BASE_URL = "https://mynameisntrealhere.github.io/KnowledgeBases"
 OUTPUT_FILE = "sitemap.xml"
-# ======================
 
-EXCLUDE_FILES = [
-    "header.html",
-    "sidebar.html",
-    "404.html",
-]
+def generate_sitemap(base_url, root_dir, output_file):
+    urls = []
 
-EXCLUDE_INDEXES = [
-    "Retail Tycoon 2/index.html",  # your redirecting index
-]
-
-urls = []
-
-for root, dirs, files in os.walk(ROOT_FOLDER):
-    for file in files:
-        if not file.endswith(".html"):
+    for dirpath, _, filenames in os.walk(root_dir):
+        # Skip hidden folders, .git, includes, styles, scripts, etc.
+        if any(skip in dirpath for skip in [".git", "includes", "styles", "scripts", "__pycache__","404","google2e3a25bac580b9ff"]):
             continue
 
-        filepath = os.path.join(root, file).replace("\\", "/")
+        for file in filenames:
+            if not file.endswith(".html"):
+                continue
+            if file in ["index.html", "redirect.html"]:
+                # Skip redirect pages or root indexes
+                continue
 
-        # Skip excluded files
-        if any(filepath.endswith(ex) for ex in EXCLUDE_FILES):
-            continue
+            rel_path = os.path.relpath(os.path.join(dirpath, file), root_dir)
+            encoded_path = urllib.parse.quote(rel_path.replace("\\", "/"))
+            urls.append(f"{base_url}/{encoded_path}")
 
-        # Skip redirecting or root index
-        if any(filepath.endswith(ex) for ex in EXCLUDE_INDEXES):
-            continue
+    # Generate XML content
+    xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 
-        # Skip hidden/system files
-        if "/." in filepath:
-            continue
+    for url in sorted(urls):
+        xml_content += f"  <url>\n    <loc>{url}</loc>\n  </url>\n"
 
-        # Build relative URL
-        rel_path = os.path.relpath(filepath, ROOT_FOLDER).replace("\\", "/")
+    xml_content += "</urlset>\n"
 
-        # Construct full URL
-        url = f"{BASE_URL}/{rel_path}"
-        urls.append(url)
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(xml_content)
 
-# Generate sitemap XML
-xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
-xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    print(f"✅ Sitemap generated: {output_file} ({len(urls)} URLs included)")
 
-for url in sorted(urls):
-    xml += f"  <url><loc>{url}</loc></url>\n"
-
-xml += "</urlset>"
-
-# Save file
-with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    f.write(xml)
-
-print(f"✅ Sitemap generated: {OUTPUT_FILE} ({len(urls)} URLs included)")
+if __name__ == "__main__":
+    generate_sitemap(BASE_URL, ".", OUTPUT_FILE)
