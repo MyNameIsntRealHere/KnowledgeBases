@@ -1,13 +1,22 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const base =
-    location.hostname === "MyNameIsntRealHere.github.io"
-      ? "/RetailTycoon2KB/"
-      : "./";
+  // Detect if we're inside the "pages" folder or in the root
+  const pathDepth = window.location.pathname.split("/").filter(p => p).length;
+  const isGitHub = location.hostname === "MyNameIsntRealHere.github.io";
 
+  let base;
+  if (isGitHub) {
+    base = "/KnowledgeBases/Retail Tycoon 2/"; // 👈 adjust this to match your actual repo name if different
+  } else {
+    // If current file is in /pages/, go one level up
+    base = window.location.pathname.includes("/pages/") ? "../" : "./";
+  }
+
+  // Load includes dynamically
   loadInclude("header", `${base}includes/header.html`);
   loadInclude("sidebar", `${base}includes/sidebar.html`);
 });
 
+// --- Function to load external HTML includes ---
 function loadInclude(id, url) {
   fetch(url)
     .then((res) => {
@@ -23,19 +32,11 @@ function loadInclude(id, url) {
     });
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  loadInclude("header", "includes/header.html");
-  loadInclude("sidebar", "includes/sidebar.html");
-
-  if (window.innerWidth < 800) {
-    alert("⚠️ This site is best viewed on a larger screen.\nSome elements will not display correctly.\nPutting your device horizontally might help at least a bit.");
-  }
-});
-
+// --- Dynamic in-page navigation ---
 function loadPage(page, addToHistory = true) {
   fetch(`pages/${page}.html`)
-    .then(res => res.ok ? res.text() : Promise.reject())
-    .then(html => {
+    .then((res) => (res.ok ? res.text() : Promise.reject()))
+    .then((html) => {
       const content = document.getElementById("content");
       content.innerHTML = html;
       content.scrollTop = 0;
@@ -45,11 +46,13 @@ function loadPage(page, addToHistory = true) {
       }
     })
     .catch(() => {
-      document.getElementById("content").innerHTML = "<h4>404</h4><h5>Oops! The page you're looking for doesn't exist (yet).</h5><h5>You can use the sidebar to view another page.</h5><h5>If you think this is a mistake, feel free to contact MyNameIsntRealHere via Discord (@kwallentrein) or Roblox (@MyNameIsntRealHere)!</h5>";
+      document.getElementById("content").innerHTML =
+        "<h4>404</h4><h5>Oops! The page you're looking for doesn't exist (yet).</h5><h5>You can use the sidebar to view another page.</h5><h5>If you think this is a mistake, feel free to contact MyNameIsntRealHere via Discord (@kwallentrein) or Roblox (@MyNameIsntRealHere)!</h5>";
     });
 }
 
-window.addEventListener("popstate", event => {
+// --- Back/forward button support ---
+window.addEventListener("popstate", (event) => {
   if (event.state && event.state.page) {
     loadPage(event.state.page, false);
   } else {
@@ -57,6 +60,7 @@ window.addEventListener("popstate", event => {
   }
 });
 
+// --- Smooth scroll function ---
 function scrollToSection(id) {
   const el = document.getElementById(id);
   if (el) {
@@ -64,11 +68,7 @@ function scrollToSection(id) {
   }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  loadInclude("header", "includes/header.html");
-  loadInclude("sidebar", "includes/sidebar.html");
-});
-
+// --- Sidebar toggle ---
 document.addEventListener("click", (e) => {
   if (e.target.id === "menuToggle") {
     document.getElementById("sidebar").classList.toggle("active");
@@ -84,25 +84,22 @@ function setupResponsiveButtons() {
 
   function moveButtons() {
     if (window.innerWidth <= 800) {
-      // Move to sidebar if not already there
       if (!sidebar.contains(headerButtons)) {
         sidebar.prepend(headerButtons);
       }
     } else {
-      // Move back to header
       const header = document.getElementById("header");
       if (!header.contains(headerButtons)) {
-        // Adjust this selector depending on where your buttons normally sit
         header.appendChild(headerButtons);
       }
     }
   }
 
-  moveButtons(); // Run once on load
+  moveButtons();
   window.addEventListener("resize", moveButtons);
 }
 
-// Wait until includes are loaded, then run the setup
+// --- Run responsive setup after includes load ---
 window.addEventListener("load", () => {
   setTimeout(setupResponsiveButtons, 300);
 });
