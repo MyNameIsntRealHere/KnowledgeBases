@@ -1,7 +1,7 @@
 import os
 
 # === CONFIGURATION ===
-BASE_URL = "https://yourusername.github.io/KnowledgeBases"  # <-- change this
+BASE_URL = "https://mynameisntrealhere.github.io/KnowledgeBases"  # <-- change this
 ROOT_FOLDER = "."  # Path to your repo root
 OUTPUT_FILE = "sitemap.xml"
 # ======================
@@ -9,7 +9,7 @@ OUTPUT_FILE = "sitemap.xml"
 EXCLUDE_FILES = [
     "header.html",
     "sidebar.html",
-    "redirect.html",  # if you ever have redirect helper pages
+    "404.html",
 ]
 
 EXCLUDE_INDEXES = [
