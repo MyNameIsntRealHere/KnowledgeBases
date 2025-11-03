@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mynameisntrealhere.github.io/KnowledgeBases/sitemap.xml
