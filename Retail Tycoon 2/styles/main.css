@@ -175,6 +175,13 @@ summary:hover {
   cursor: pointer;
 }
 
+.sidebarlink.active-page {
+  color: var(--accent);
+  padding-left: 6px;
+  font-weight: bold;
+}
+
+
 /* --------------------------------------------------------------
    SIDEBAR (MOBILE)
 -------------------------------------------------------------- */

@@ -13,7 +13,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Load includes dynamically
   loadInclude("header", `${base}includes/header.html`);
-  loadInclude("sidebar", `${base}includes/sidebar.html`);
+  fetch(`${base}includes/sidebar.html`)
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("sidebar").innerHTML = html;
+    highlightSidebarCategory(); // 🔹 Run after sidebar is loaded
+  })
+  .catch(err => {
+    console.error(err);
+    document.getElementById("sidebar").innerHTML = `<p>Failed to load sidebar</p>`;
+  });
 });
 
 // --- Function to load external HTML includes ---
@@ -103,3 +112,31 @@ function setupResponsiveButtons() {
 window.addEventListener("load", () => {
   setTimeout(setupResponsiveButtons, 300);
 });
+
+function highlightSidebarCategory() {
+  const currentPath = window.location.pathname;
+
+  // Example: /RetailTycoon2/pages/vehicles-ba-pickuptruck.html
+  const match = currentPath.match(/\/pages\/([a-z]+)-/i);
+  const categoryName = match ? match[1].toLowerCase() : null;
+
+  const categories = document.querySelectorAll("details");
+
+  categories.forEach((details) => {
+    const summaryText = details.querySelector("summary")?.innerText.toLowerCase();
+
+    if (categoryName && summaryText.includes(categoryName)) {
+      details.setAttribute("open", "true"); // Expand correct section
+    } else {
+      details.removeAttribute("open");
+    }
+
+    // Highlight active page link
+    details.querySelectorAll("a").forEach((link) => {
+      const linkHref = link.getAttribute("href");
+      if (currentPath.endsWith(linkHref)) {
+        link.classList.add("active-page");
+      }
+    });
+  });
+}
