@@ -21,95 +21,122 @@
 
 <body>
   <header id="header"></header>
-  <div class="container">
+  <div class="together">
     <aside id="sidebar"></aside>
-    <main id="content">
-      <h2 class="ContentTitle">Sellables</h2>
+      <main id="content">
 
-      <p class="ContentBetweenTitle"></p>
-      <p class="ContentFull">Sellables (or products) are the items you sell to your customers.</p>
-
-      <p class="ContentBetweenTitle">How to get them to your storage?</p>
-      <p class="ContentFull">
-        You can order sellables via the storage menu at the top of your screen, in here you can see the buying price, selling price and unit size of each product and how much of them you have in your storage.
-        <br>You can hire a <a href="employees-bd-manager.html">manager</a> to automate the ordering process.
-        <br><br>Once you ordered the sellables, you (or your <a href="employees-bd-deliverydriver.html">delivery driver</a>) will need to pick them up at the loading dock and transport them to your store.
-        <br><br>You can also choose the option "instant delivery" when ordering, this will teleport the sellables directly to your storage instead of to the loading dock. Using this will increase the buying price by 25%, without increasing the selling price, making less profit and some sellables even making a loss. (this does not affect money trees)
-      </p>
-
-      <p class="ContentBetweenTitle">Money Trees</p>
-      <p class="ContentFull">
-        Money trees give you a 2% increase on all profit you make by selling sellables.
-        <br><br>You can earn money trees by selling a certain amount of sellables in your store. You can find these milestones when you scroll down in your store statistics. Once you hit a milestone you unlock a money tree and the milestone increases so you can earn another money tree for that item. (You need to place the money trees on your plot in order to let them work. There is no max amount of money trees)
-      </p>
-      <p class="contentUTable">
-        profit = selling price - buying price
-      </p>
-
-      <p class="ContentBetweenTitle">Deleting Sellables</p>
-      <p class="ContentFull">You can remove sellables from you inventory by going to the storage menu at the top of the screen and selecting the trash button instead of the Buy button.</p>
-
-      <p class="ContentBetweenTitle">Overview of all sellable categorys</p>
-      <table class="ContentTable">
-        <tr class="TableHead"><th>Category</th><th>Buying Price</th><th>Selling Price</th><th>Profit</th><th>Unit Size</th></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-ba-toys.html">Toys</a></td><td>$20</td><td>$45</td><td>$25</td><td>8</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bb-clothing.html">Clothing</a></td><td>$30</td><td>$55</td><td>$25</td><td>2</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bc-shoes.html">Shoes</a></td><td>$40</td><td>$75</td><td>$35</td><td>4</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bd-hats.html">Hats</a></td><td>$50</td><td>$95</td><td>$45</td><td>6</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-be-candy.html">Candy</a></td><td>$8</td><td>$15</td><td>$7</td><td>1</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bf-snacks.html">Snacks</a></td><td>$7</td><td>$15</td><td>$8</td><td>2</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bg-cannedfood.html">Canned Food</a></td><td>$10</td><td>$20</td><td>$10</td><td>2</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bh-boxedfood.html">Boxed Food</a></td><td>$12</td><td>$24</td><td>$12</td><td>3</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bi-coldfood.html">Cold Food</a></td><td>$15</td><td>$30</td><td>$15</td><td>3</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bj-bakedgoods.html">Baked Goods</a></td><td>$12</td><td>$25</td><td>$13</td><td>4</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bk-fruit.html">Fruit</a></td><td>$10</td><td>$22</td><td>$12</td><td>3</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bl-vegetables.html">Vegetables</a></td><td>$10</td><td>$22</td><td>$12</td><td>3</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bm-condiments.html">Condiments</a></td><td>$10</td><td>$20</td><td>$10</td><td>2</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bn-beverages.html">Beverages</a></td><td>$8</td><td>$18</td><td>$10</td><td>4</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bo-smallelectronics.html">Small Electronics</a></td><td>$400</td><td>$700</td><td>$300</td><td>4</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bp-largeelectronics.html">Large Electronics</a></td><td>$700</td><td>$1.100</td><td>$400</td><td>15</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bq-pcelectronics.html">PC Electronics</a></td><td>$450</td><td>$800</td><td>$350</td><td>10</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-br-pcperipherals.html">PC Peripherals</a></td><td>$85</td><td>$160</td><td>$75</td><td>6</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bs-officeelectronics.html">Office Electronics</a></td><td>$45</td><td>$85</td><td>$40</td><td>8</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bt-gameconsoles.html">Game Consoles</a></td><td>$290</td><td>$500</td><td>$210</td><td>15</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bu-videogames.html">Videogames</a></td><td>$35</td><td>$60</td><td>$25</td><td>1</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bv-smallappliances.html">Small Appliances</a></td><td>$200</td><td>$350</td><td>$150</td><td>15</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bw-largeappliances.html">Large Appliances</a></td><td>$1.000</td><td>$1.500</td><td>$500</td><td>100</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bx-kitchenware.html">Kitchenware</a></td><td>$40</td><td>$80</td><td>$40</td><td>12</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-by-papergoods.html">Paper Goods</a></td><td>$12</td><td>$25</td><td>$13</td><td>10</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-bz-luggage.html">Luggage</a></td><td>$70</td><td>$150</td><td>$80</td><td>10</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-ca-vacuumcleaners.html">Vacuum Cleaners</a></td><td>$100</td><td>$200</td><td>$100</td><td>15</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cb-personalcare.html">Personal Care</a></td><td>$18</td><td>$38</td><td>$20</td><td>2</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cc-schoolsupplies.html">School Supplies</a></td><td>$15</td><td>$30</td><td>$15</td><td>2</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cd-brassinstruments.html">Brass Instruments</a></td><td>$500</td><td>$850</td><td>$350</td><td>20</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-ce-stringinstruments.html">String Instruments</a></td><td>$500</td><td>$850</td><td>$350</td><td>20</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cf-pianos.html">Pianos</a></td><td>$650</td><td>$1.100</td><td>$450</td><td>90</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cg-smalloutdoorequipment.html">Small Outdoor Equipment</a></td><td>$130</td><td>$250</td><td>$120</td><td>30</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-ch-largeoutdoorequipment.html">Large Outdoor Equipment</a></td><td>$500</td><td>$900</td><td>$400</td><td>80</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-ci-smallpowertools.html">Small Power Tools</a></td><td>$65</td><td>$120</td><td>$55</td><td>8</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cj-largepowertools.html">Large Power Tools</a></td><td>$115</td><td>$250</td><td>$115</td><td>80</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-ck-gardentools.html">Garden Tools</a></td><td>$40</td><td>$80</td><td>$40</td><td>30</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cl-paintsupplies.html">Paint Supplies</a></td><td>$18</td><td>$40</td><td>$22</td><td>6</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cm-lumber.html">Lumber</a></td><td>$20</td><td>$40</td><td>$20</td><td>10</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cn-smallfurniture.html">Small Furniture</a></td><td>$180</td><td>$400</td><td>$220</td><td>80</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-co-largefurniture.html">Large Furniture</a></td><td>$450</td><td>$1.000</td><td>$550</td><td>200</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cp-exerciseequipment.html">Exercise Equipment</a></td><td>$560</td><td>$1.200</td><td>$640</td><td>200</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cq-gametables.html">Game Tables</a></td><td>$155</td><td>$350</td><td>$195</td><td>150</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cr-personaltransport.html">Personal Transport</a></td><td>$425</td><td>$800</td><td>$375</td><td>50</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cs-carparts.html">Car Parts</a></td><td>$50</td><td>$100</td><td>$50</td><td>12</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-ct-economycars.html">Economy Cars</a></td><td>$13.000</td><td>$15.000</td><td>$2.000</td><td>1.500</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cu-jewelry.html">Jewelry</a></td><td>$850</td><td>$1.200</td><td>$350</td><td>1</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cv-smallpets.html">Small Pets</a></td><td>$65</td><td>$140</td><td>$75</td><td>40</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cw-largepets.html">Large Pets</a></td><td>$600</td><td>$1.200</td><td>$600</td><td>150</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cx-petfood.html">Pet Food</a></td><td>$20</td><td>$40</td><td>$20</td><td>8</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cy-guns.html">Guns</a></td><td>$850</td><td>$1.500</td><td>$650</td><td>15</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-cz-ammo.html">Ammo</a></td><td>$70</td><td>$150</td><td>$80</td><td>5</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-da-militaryvehicles.html">Military Vehicles</a></td><td>$90.000</td><td>$100.000</td><td>$10.000</td><td>3.000</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-db-armoredvehicles.html">Armored Vehicles</a></td><td>$485.000</td><td>$500.000</td><td>$15.000</td><td>4.000</td></tr>
-        <!--<tr class="TableChild"><td class="TableFirst"><a href="sellables-dc-valentine.html">Valentine</a></td><td>300 units</td><td>95</td><td>60</td><td>$5.000</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-dd-halloween.html">Halloween</a></td><td>300 units</td><td>95</td><td>60</td><td>$5.000</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="sellables-de-christmas.html">Christmas</a></td><td>300 units</td><td>95</td><td>60</td><td>$5.000</td></tr>-->
-      </table>
+        <div class="top">
+          <p class="toptitle">Sellables</p>
+          <div class="topsummary">
+            <p class="topsummarytitle">Quick Summary</p>
+            <p class="topsummarycontent">Sellables (or products) are the items you sell in your store to (hopefully) make a profit.</p>
+          </div>
+        </div>
+        <hr class="topline">
+        <div class="middle">
+          <p class="middlebetweentitle">From ordering to selling</p>
+          <hr class="betweentitledivider">
+          <div class="imagegroup">
+            <img src="../images/TB storage.png" alt="Access the storage menu">
+            <img src="../images/Storage.png" alt="Order Sellables">
+          </div>
+          <p class="middletextalone">
+            In order to start selling sellables and start making money, you will need to have the sellables in your store:
+            <br><br>• You can order sellables via the storage menu at the top of your screen. You can automate this process by hiring a <a href="employees-bd-manager.html">manager</a>.
+            <br><br>• Once you ordered what you wanted, you will need to collect the sellables at the loading dock and transport them to your store. You can also automate this process by hiring a <a href="employees-bd-deliverydriver.html">delivery driver</a>.
+            <br><br>• When the sellables arrived at your store, they will be in your storage. Now you only need to put them on your shelves so the customers can buy them. You can do this via the restocking menu at the top of your screen, or hire a <a href="employees-bb-restocker.html">restocker</a> to do the work for you.
+            <br><br><br>When ordering sellables you can choose to enable the option "instant delivery". This will increase the price of the sellables you buy by 25%, but they will go directly into your stores storage, eliminating the need to transport them from the loading dock to your store.
+          </p>
+          <p class="middlebetweentitle">Deleting sellables</p>
+          <hr class="betweentitledivider">
+          <div class="imagegroup">
+            <img src="../images/STOR del.png" alt="Delete a Sellable">
+          </div>          
+          <p class="middletextalone">
+            When you want to get rid of (some) sellables in your store storage, you get do that by using the trash icon in the storage menu. You can not get rid of sellables that are at the loading dock, so you first need to transport them to your store.
+          </p>
+          <p class="middlebetweentitle">Money Trees</p>
+          <hr class="betweentitledivider">
+          <div class="imagegroup">
+            <img src="../images/tree.png" alt="Money Tree">
+          </div>              
+          <p class="middletextalone">
+            Money trees give you a 2% increase on all sellables you sell in your store.
+            <br>To unlock money trees, you need to sell a certain amount of items in your store. These milestones can be found on the statistics page when opening your store settings.
+            <br>Once you reach one of the milestones, that one will increase to allow you to earn another money for that sellable.
+            <br><br>Money trees give you a 2% increase on profits, not on the selling price of items.
+            <br>Money trees need to be placed somewhere on your plot to have an effect. (You can also place them on the roof)
+          </p>
+          <p class="middlebetweentitle">Overview of all sellable categorys</p>
+          <hr class="betweentitledivider">  
+          <div class="tablewrap">
+            <table class="ContentTable">
+            <tr class="TableHead"><th>Category</th><th>Buying Price</th><th>Selling Price</th><th>Profit</th><th>Unit Size</th></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-ba-toys.html">Toys</a></td><td>$20</td><td>$45</td><td>$25</td><td>8</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bb-clothing.html">Clothing</a></td><td>$30</td><td>$55</td><td>$25</td><td>2</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bc-shoes.html">Shoes</a></td><td>$40</td><td>$75</td><td>$35</td><td>4</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bd-hats.html">Hats</a></td><td>$50</td><td>$95</td><td>$45</td><td>6</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-be-candy.html">Candy</a></td><td>$8</td><td>$15</td><td>$7</td><td>1</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bf-snacks.html">Snacks</a></td><td>$7</td><td>$15</td><td>$8</td><td>2</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bg-cannedfood.html">Canned Food</a></td><td>$10</td><td>$20</td><td>$10</td><td>2</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bh-boxedfood.html">Boxed Food</a></td><td>$12</td><td>$24</td><td>$12</td><td>3</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bi-coldfood.html">Cold Food</a></td><td>$15</td><td>$30</td><td>$15</td><td>3</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bj-bakedgoods.html">Baked Goods</a></td><td>$12</td><td>$25</td><td>$13</td><td>4</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bk-fruit.html">Fruit</a></td><td>$10</td><td>$22</td><td>$12</td><td>3</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bl-vegetables.html">Vegetables</a></td><td>$10</td><td>$22</td><td>$12</td><td>3</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bm-condiments.html">Condiments</a></td><td>$10</td><td>$20</td><td>$10</td><td>2</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bn-beverages.html">Beverages</a></td><td>$8</td><td>$18</td><td>$10</td><td>4</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bo-smallelectronics.html">Small Electronics</a></td><td>$400</td><td>$700</td><td>$300</td><td>4</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bp-largeelectronics.html">Large Electronics</a></td><td>$700</td><td>$1.100</td><td>$400</td><td>15</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bq-pcelectronics.html">PC Electronics</a></td><td>$450</td><td>$800</td><td>$350</td><td>10</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-br-pcperipherals.html">PC Peripherals</a></td><td>$85</td><td>$160</td><td>$75</td><td>6</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bs-officeelectronics.html">Office Electronics</a></td><td>$45</td><td>$85</td><td>$40</td><td>8</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bt-gameconsoles.html">Game Consoles</a></td><td>$290</td><td>$500</td><td>$210</td><td>15</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bu-videogames.html">Videogames</a></td><td>$35</td><td>$60</td><td>$25</td><td>1</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bv-smallappliances.html">Small Appliances</a></td><td>$200</td><td>$350</td><td>$150</td><td>15</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bw-largeappliances.html">Large Appliances</a></td><td>$1.000</td><td>$1.500</td><td>$500</td><td>100</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bx-kitchenware.html">Kitchenware</a></td><td>$40</td><td>$80</td><td>$40</td><td>12</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-by-papergoods.html">Paper Goods</a></td><td>$12</td><td>$25</td><td>$13</td><td>10</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-bz-luggage.html">Luggage</a></td><td>$70</td><td>$150</td><td>$80</td><td>10</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-ca-vacuumcleaners.html">Vacuum Cleaners</a></td><td>$100</td><td>$200</td><td>$100</td><td>15</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cb-personalcare.html">Personal Care</a></td><td>$18</td><td>$38</td><td>$20</td><td>2</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cc-schoolsupplies.html">School Supplies</a></td><td>$15</td><td>$30</td><td>$15</td><td>2</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cd-brassinstruments.html">Brass Instruments</a></td><td>$500</td><td>$850</td><td>$350</td><td>20</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-ce-stringinstruments.html">String Instruments</a></td><td>$500</td><td>$850</td><td>$350</td><td>20</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cf-pianos.html">Pianos</a></td><td>$650</td><td>$1.100</td><td>$450</td><td>90</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cg-smalloutdoorequipment.html">Small Outdoor Equipment</a></td><td>$130</td><td>$250</td><td>$120</td><td>30</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-ch-largeoutdoorequipment.html">Large Outdoor Equipment</a></td><td>$500</td><td>$900</td><td>$400</td><td>80</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-ci-smallpowertools.html">Small Power Tools</a></td><td>$65</td><td>$120</td><td>$55</td><td>8</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cj-largepowertools.html">Large Power Tools</a></td><td>$115</td><td>$250</td><td>$115</td><td>80</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-ck-gardentools.html">Garden Tools</a></td><td>$40</td><td>$80</td><td>$40</td><td>30</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cl-paintsupplies.html">Paint Supplies</a></td><td>$18</td><td>$40</td><td>$22</td><td>6</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cm-lumber.html">Lumber</a></td><td>$20</td><td>$40</td><td>$20</td><td>10</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cn-smallfurniture.html">Small Furniture</a></td><td>$180</td><td>$400</td><td>$220</td><td>80</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-co-largefurniture.html">Large Furniture</a></td><td>$450</td><td>$1.000</td><td>$550</td><td>200</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cp-exerciseequipment.html">Exercise Equipment</a></td><td>$560</td><td>$1.200</td><td>$640</td><td>200</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cq-gametables.html">Game Tables</a></td><td>$155</td><td>$350</td><td>$195</td><td>150</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cr-personaltransport.html">Personal Transport</a></td><td>$425</td><td>$800</td><td>$375</td><td>50</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cs-carparts.html">Car Parts</a></td><td>$50</td><td>$100</td><td>$50</td><td>12</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-ct-economycars.html">Economy Cars</a></td><td>$13.000</td><td>$15.000</td><td>$2.000</td><td>1.500</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cu-jewelry.html">Jewelry</a></td><td>$850</td><td>$1.200</td><td>$350</td><td>1</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cv-smallpets.html">Small Pets</a></td><td>$65</td><td>$140</td><td>$75</td><td>40</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cw-largepets.html">Large Pets</a></td><td>$600</td><td>$1.200</td><td>$600</td><td>150</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cx-petfood.html">Pet Food</a></td><td>$20</td><td>$40</td><td>$20</td><td>8</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cy-guns.html">Guns</a></td><td>$850</td><td>$1.500</td><td>$650</td><td>15</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-cz-ammo.html">Ammo</a></td><td>$70</td><td>$150</td><td>$80</td><td>5</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-da-militaryvehicles.html">Military Vehicles</a></td><td>$90.000</td><td>$100.000</td><td>$10.000</td><td>3.000</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-db-armoredvehicles.html">Armored Vehicles</a></td><td>$485.000</td><td>$500.000</td><td>$15.000</td><td>4.000</td></tr>
+            <!--<tr class="TableChild"><td class="TableFirst"><a href="sellables-dc-valentine.html">Valentine</a></td><td>300 units</td><td>95</td><td>60</td><td>$5.000</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-dd-halloween.html">Halloween</a></td><td>300 units</td><td>95</td><td>60</td><td>$5.000</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="sellables-de-christmas.html">Christmas</a></td><td>300 units</td><td>95</td><td>60</td><td>$5.000</td></tr>-->
+          </table>
+        </div>
+        </div>
+        <hr class="bottomline">
+        <div class="bottom">
+          <p class="bottomtext">For concerns: Discord&nbsp;(@kwallentrein) or Roblox&nbsp;(@MyNameIsntRealHere)<br>This is not an official site and can contain mistakes.</p>
+        </div>
+      </main>
   </div>
   <script src="../styles/main.js"></script>
 </body>
