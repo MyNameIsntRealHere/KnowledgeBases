@@ -18,31 +18,89 @@
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
-
 <body>
   <header id="header"></header>
-  <div class="container">
+  <div class="together">
     <aside id="sidebar"></aside>
-    <main id="content">
-      <h2 class="ContentTitle">Employees</h2>
+      <main id="content">
 
-      <p class="ContentBetweenTitle">What do they do?</p>
-      <p class="ContentFull">Employees help you automate your store. You can hire and fire employees via the employee menu at the top of the screen.<br><br>Employees level up when they work in your store, the higher their level, the quicker they can do their job.<br><br>Each of your employees gets a set salary per minute. The only time when you don't need to pay them is when your store is closed and all customers have left.<br>When you pause an employee, they will still take half of their salary.<br><br>There is no maximum amount of employees you can hire.</p>
-
-
-      <p class="ContentBetweenTitle">Overview of all employees</p>
-      <table class="ContentTable">
-        <tr class="TableHead"><th>Employee</th><th>Hiring Cost</th><th>Per-minute pay</th><th>Items needed to work</th></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="employees-ba-cashier.html">Cashier</a></td><td>$200</td><td>$20</td><td>Checkout Register/Counter</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="employees-bb-restocker.html">Restocker</a></td><td>$200</td><td>$20</td><td>/</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="employees-bc-janitor.html">Janitor</a></td><td>$200</td><td>$20</td><td>Dumpster</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="employees-bd-manager.html">Manager</a></td><td>$400</td><td>$40</td><td>Manager/Any-employee desk</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="employees-be-guard.html">Guard</a></td><td>$300</td><td>$30</td><td>/ (work best with security gates/cameras)</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="employees-bf-deliverydriver.html">Delivery Driver</a></td><td>$300</td><td>$30</td><td>Vehicle with more than 0 capacity</td></tr>
-        <tr class="TableChild"><td class="TableFirst"><a href="employees-bg-financerep.html">Finance Rep</a></td><td>$400</td><td>$40</td><td>Finance Rep/Any-employee desk</td></tr>
-      </table>
-    </main>
+        <div class="top">
+          <p class="toptitle">Employees</p>
+          <div class="topsummary">
+            <p class="topsummarytitle">Quick Summary</p>
+            <p class="topsummarycontent">Employees are workers you can hire to automate certain tasks in your store.</p>
+          </div>
+        </div>
+        <hr class="topline">
+        <div class="middle">
+          <p class="middlebetweentitle">How to hire</p>
+          <hr class="betweentitledivider">
+          <div class="imagegroup">
+            <img src="../images/TB employee.png" alt="Employees menu button">
+          </div>
+          <p class="middletextalone">
+            The employees menu that you can open at the top of your screen is the place where you manage all your employees.
+            <br>From here you can hire and fire employees, put them on a break and configure their settings.
+          </p>
+          <p class="middlebetweentitle">Managing your staff</p>
+          <hr class="betweentitledivider">
+          <p class="middletextalone">
+            Each employee you hire requires a set wage per minute (see table below), this gets paid automatically.
+            <br>You can pause your employees to only pay them half.
+            <br>Once you close your store and all customers are gone, you will stop paying your employees.
+            <br><br>Your employees will level up while they are working at your store. When they level up they generally get faster or better at their job.
+            <br><br>Certain employees have specific settings you can/need to configure, you can do this by clicking on an employee in the employees tab:
+            <br>• <a href="employees-bd-manager.html">manager</a>: You can configure the "amount to stock" and whether or not they order via instant-delivery. 
+            <br>• <a href="employees-bd-deliverydriver.html">delivery driver</a>: You can select which <a href="vehicles-aa-overview.html">vehicle</a> you want your delivery driver to use, make sure you have enough space for them to park at your store.
+            <br>• <a href="employees-bd-financerep.html">finance rep</a>: You can configure the minimum loan they can give out to customers in your store, it is recommended to set this to "any" once you have enough finance reps.
+          </p>
+          <p class="middlebetweentitle">Staff-views</p>
+          <hr class="betweentitledivider">
+          <div class="imagegroup">
+            <img src="../images/employeeview.png" alt="Employee in-store view">
+            <img src="../images/employeeview2.png" alt="Employee menu view">
+          </div>
+          <p class="middletextalone">
+            When clicking on an employee that is in your store you can:
+            <br>• see their name & role
+            <br>• see their level and how close they are to their next level
+            <br>• reset that employee by clicking the arrows.
+            <br><br>When clicking on an employee in the employees tab you can:
+            <br>• see their name
+            <br>• see their level and how close they are to their next level
+            <br>• pause or unpause your employee
+            <br>• change the employee settings (on some employees)
+            <br>• fire that employee.
+          </p>
+          <p class="middlebetweentitle">Store-management</p>
+          <hr class="betweentitledivider">
+          <div class="imagegroup">
+            <img src="../images/overlaysecandtrash.png" alt="Buildoverlays">
+          </div>
+          <p class="middletextalone">
+            You can use some overlays in build mode to smooth your employees work (see image):
+            <br><br>For your <a href="employees-be-guard.html">guards</a>, you can use the camera overlay to see where the cameras you put around your store can see and alert your guard.
+            <br>For your <a href="employees-bc-janitor.html">janitors</a>, you can use the last overlay to see where the bins you have placed around your store cover. Customers can litter the ground on all grey spots.
+          </p>       
+          <p class="middlebetweentitle">Overview of all employee-types</p>
+          <hr class="betweentitledivider">
+          <table class="ContentTable">
+            <tr class="TableHead"><th>Employee</th><th>Hiring Cost</th><th>Per-minute pay</th><th>Items needed to work</th></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="employees-ba-cashier.html">Cashier</a></td><td>$200</td><td>$20</td><td>Checkout Register/Counter</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="employees-bb-restocker.html">Restocker</a></td><td>$200</td><td>$20</td><td>/</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="employees-bc-janitor.html">Janitor</a></td><td>$200</td><td>$20</td><td>Dumpster</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="employees-bd-manager.html">Manager</a></td><td>$400</td><td>$40</td><td>Manager/Any-employee desk</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="employees-be-guard.html">Guard</a></td><td>$300</td><td>$30</td><td>/ (work best with security gates/cameras)</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="employees-bf-deliverydriver.html">Delivery Driver</a></td><td>$300</td><td>$30</td><td>Vehicle with more than 0 capacity</td></tr>
+            <tr class="TableChild"><td class="TableFirst"><a href="employees-bg-financerep.html">Finance Rep</a></td><td>$400</td><td>$40</td><td>Finance Rep/Any-employee desk</td></tr>
+          </table>
+        </div>
+        <hr class="bottomline">
+        <div class="bottom">
+          <p class="bottomtext">For concerns: Discord&nbsp;(@kwallentrein) or Roblox&nbsp;(@MyNameIsntRealHere)<br>This is not an official site and can contain mistakes.</p>
+        </div>
+      </main>
   </div>
   <script src="../styles/main.js"></script>
 </body>
-</html>  
+</html>
