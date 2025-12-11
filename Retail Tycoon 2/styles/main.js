@@ -108,7 +108,6 @@ function setupResponsiveButtons() {
   window.addEventListener("resize", moveButtons);
 }
 
-// --- Run responsive setup after includes load ---
 window.addEventListener("load", () => {
   setTimeout(setupResponsiveButtons, 300);
 });
@@ -116,7 +115,6 @@ window.addEventListener("load", () => {
 function highlightSidebarCategory() {
   const currentPath = window.location.pathname;
 
-  // Example: /RetailTycoon2/pages/vehicles-ba-pickuptruck.html
   const match = currentPath.match(/\/pages\/([a-z]+)-/i);
   const categoryName = match ? match[1].toLowerCase() : null;
 
