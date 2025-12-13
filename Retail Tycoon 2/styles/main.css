@@ -68,6 +68,7 @@ header {
 }
 
 .headerbutton {
+  display: flex;
   background: #000000;
   border: 4px solid var(--bg);
   color: #FFFFFF;
@@ -78,10 +79,13 @@ header {
   font-size: 25px;
   font-weight: bold;
   width: -webkit-fill-available;
+  align-items: center;
+  justify-content: center;
 }
 
 .headerbutton:hover {
   border-color: var(--accent);
+  text-decoration: none;
 }
 
 

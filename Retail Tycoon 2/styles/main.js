@@ -1,5 +1,4 @@
 window.addEventListener("DOMContentLoaded", () => {
-  // Detect if we're inside the "pages" folder or in the root
   const pathDepth = window.location.pathname.split("/").filter(p => p).length;
   const isGitHub = location.hostname === "MyNameIsntRealHere.github.io";
 

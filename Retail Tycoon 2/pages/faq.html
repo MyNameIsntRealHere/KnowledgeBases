@@ -11,8 +11,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="FAQ page for retail tycoon 2 where the most asked questions and problems about the game get answered">
-  <meta name="keywords" content="Retail Tycoon 2, RT2, Roblox, knowledge base, information, faq, wiki">
+  <meta name="description" content="FAQ page for RT2: red cross symbol explained, NPCs dissapearing, employees not working as intended, money trees not giving enough money, ...">
+  <meta name="keywords" content="Retail Tycoon 2, RT2, Roblox, knowledge base, information, money tree, faq, wiki">
   <meta name="robots" content="index, follow">
   <title>FAQ | RT2 KB</title>
   <link rel="stylesheet" href="../styles/main.css">
@@ -21,54 +21,104 @@
 
 <body>
   <header id="header"></header>
-  <div class="container">
+  <div class="together">
     <aside id="sidebar"></aside>
-    <main id="content">
-      <h2 class="ContentTitle">FAQ</h2>
+      <main id="content">
 
-      <div class="faq-buttons">
-        <button onclick="scrollToSection('employeesandcustomers')">Employees & Customers</button>
-        <button onclick="scrollToSection('buildmode')">Building(s) / Bulldozing</button>
-        <button onclick="scrollToSection('moneytrees')">Money Trees</button>
-      </div>
+        <div class="top">
+          <p class="toptitle">FAQ</p>
+          <div class="faq-buttons">
+            <button onclick="scrollToSection('employeesandcustomers')">Employees & Customers</button>
+            <button onclick="scrollToSection('buildmode')">Building(s) / Bulldozing</button>
+            <button onclick="scrollToSection('moneytrees')">Money Trees</button>
+          </div>
+        </div>
+        <hr class="topline">
+        <div class="middle">
 
 
-      <p class="ContentBetweenTitle">I have this red-X symbol in my store</p>
-      <div class="ContentRow">
-        <p class="ContentWimg">This icon means that one or more NPCs can't reach that place, so somewhere in your build the path from an NPC to that location is blocked. This blocked path can be anywhere on your plot, not only by this icon.<br><br>Here are some commom issues that can lead to a blocked path:<br>¤ You used roof tiles as a flooring, try replacing that by a normal floor that is not a roofing tile.<br>¤ NPCs can only pathfind vertically and horizontally, NOT diagonally. Keep that in mind when designing your store.<br>¤ Shelving that is accessable via multiple side (like the spinning car display) need to be accessable via all sides at all times. Just having one side open is not enough.<br>¤ There may be one or more NPCs trapped in a (enclosed) room or a customer in an employee-only zone.</p>
-        <img class="ContentIMGcontainer" src="../images/noaccess.png" alt="Pathfinding failed">
-      </div>
+          <p class="middlebetweentitle">Can't reach symbol</p>
+          <hr class="betweentitledivider">
+          <div class="imagegroup">
+            <img src="../images/noaccess.png" alt="No access symbol">
+          </div>
+          <p class="middletextalone">
+            This icon means that one or more NPCs can't reach that place, so somewhere in your build the path from an NPC to that location is blocked. This blocked path can be anywhere on your plot, not only by this icon.
+            <br><br>Here are some commom issues that can lead to a blocked path:
+            <br>• You used roof tiles as a flooring, try replacing that by a normal floor that is not a roofing tile.
+            <br>• NPCs can only pathfind vertically and horizontally, NOT diagonally. Keep that in mind when designing your store.
+            <br>• Shelving that is accessable via multiple side (like the spinning car display) need to be accessable via all sides at all times. Just having one side open is not enough.
+            <br>• There may be one or more NPCs trapped in a (enclosed) room or a customer in an employee-only zone.
+          </p>
 
-      <p id="employeesandcustomers" class="ContentBetweenTitle">My NPCs disappear (partially) when going to the second floor</p>
-      <p class="ContentFull">This is a bug with the escalators in the game. If you replace those by normal stairs or elevators the problem will be resolved.</p>
 
-      <p class="ContentBetweenTitle">My security guard is frozen in place</p>
-      <p class="ContentFull">This is a bug in the game, the best thing you can do is rejoin.<br><br>Playing the game in a private server MIGHT help to avoid this bug.</p>
+          <p id="employeesandcustomers" class="middlebetweentitle">NPCs disappear when using the escalator</p>
+          <hr class="betweentitledivider">
+          <p class="middletextalone">
+            This is a known bug in the game.
+            <br><br>Try replacing your escalators with stairs or elevators.
+          </p>
 
-      <p class="ContentBetweenTitle">My manager is not buying any items</p>
-      <p class="ContentFull">The usual issue is that the products are waiting at the loading dock, ready to be picked up by you or a <a href="employees-bf-deliverydriver.html">delivery driver</a>. Even when you have your manager on instant delivery it is still worth checking the loading dock to see if your manager ordered the items from a time you didn't have instant delivery turned on.</p>
 
-      <p class="ContentBetweenTitle">My manager is occupying my finance reps desk and visa versa</p>
-      <div class="ContentRow">
-        <p class="ContentWimg">Try replacing your desks with employee-specific desks instead of the any-employee desk you have (accedentally) placed now. It can be confusing since the any-employee desk looks the exact same as the finance rep-only desk.</p>
-        <img class="ContentIMGcontainer" src="../images/desks.gif" alt="Desks">
-      </div>
+          <p class="middlebetweentitle">My manager is not buying any sellables</p>
+          <hr class="betweentitledivider">
+          <p class="middletextalone">
+            The usual issue is that the sellables are waiting at the loading dock, ready to be picked up by you or a <a href="employees-bf-deliverydriver.html">delivery driver</a>.
+            <br><br>Even when you have your manager on instant delivery it is still worth checking the loading dock to see if your manager ordered the items from a time you didn't have instant delivery turned on.
+          </p>
 
-      <p class="ContentBetweenTitle">My janitor is complaining about trash bins even if I have placed multiple.</p>
-      <div class="ContentRow">
-        <p class="ContentWimg">Your <a href="employees-bc-janitor.html">janitor</a> is not asking for a trash bin, but for a dumpster. You can find this in the infrastructure tab in build mode. This is often a simple translation error.</p>
-        <img class="ContentIMGcontainer" src="../images/dumpster.png" alt="Dumpster">
-      </div>
 
-      <p id="buildmode" class="ContentBetweenTitle">I am unable to remove lights and other ceiling items in build mode</p>
-      <p class="ContentFull">In order to remove lights, you will need to navigate to the ceiling tab in build mode and then use the remove tool to remove them.</p>
+          <p class="middlebetweentitle">My manager is occupying my finance reps desk and visa versa</p>
+          <hr class="betweentitledivider">
+          <div class="imagegroup">
+            <img src="../images/desks.gif" alt="Differnt types of desks">
+          </div>
+          <p class="middletextalone">
+            Try replacing your desks with employee-specific desks instead of the any-employee desk you have (accedentally) placed now.
+            <br><br>It can be confusing since the any-employee desk looks the exact same as the finance rep-only desk.
+          </p>
 
-      <p class="ContentBetweenTitle">My walls are gone when loading my save / Some items didn't load in when loading a save</p>
-      <p class="ContentFull">If you run into this issue, it means that your store doesn't have the time to completely load in. Try playing in a private server by yourself and your walls should return.</p>
 
-      <p id="moneytrees" class="ContentBetweenTitle">My money trees are not giving me the correct amount of extra money</p>
-      <p class="ContentFull">Money trees give a 2% increase on the PROFIT of items, not on the selling price. (profit = selling price - buying price)</p>
-    </main>
+          <p class="middlebetweentitle">My janitor is complaining about trash bins even if I have placed multiple</p>
+          <hr class="betweentitledivider">
+          <div class="imagegroup">
+            <img src="../images/dumpster.png" alt="Differnt types of desks">
+          </div>
+          <p class="middletextalone">
+            Your <a href="employees-bc-janitor.html">janitor</a> is not asking for a trash bin, but for a dumpster. You can find this in the infrastructure tab in build mode.
+            <br><br>This is often a simple translation error.
+          </p>
+
+
+          <p id="buildmode" class="middlebetweentitle">I am unable to remove lights and other ceiling items in build mode</p>
+          <hr class="betweentitledivider">
+          <p class="middletextalone">
+            In order to remove lights, you will need to navigate to the ceiling tab in build mode and then use the remove tool to remove them.
+          </p>
+
+
+          <p class="middlebetweentitle">My walls are gone when loading my save / Some items didn't load in when loading a save</p>
+          <hr class="betweentitledivider">
+          <p class="middletextalone">
+            If you run into this issue, it means that your store couldn't completely load in.
+            <br>Try joining another (less busy) server.
+            <br><br>Try playing in a private server by yourself to avoid this issue.
+          </p>
+
+
+          <p id="moneytrees" class="middlebetweentitle">My money trees are not giving me the correct amount of extra money</p>
+          <hr class="betweentitledivider">
+          <p class="middletextalone">
+            Money trees give a 2% increase on the PROFIT of items, not on the selling price.
+            <br><br>(profit = selling price - buying price)
+          </p>
+
+        </div>
+        <hr class="bottomline">
+        <div class="bottom">
+          <p class="bottomtext">For concerns: Discord&nbsp;(@kwallentrein)<br>This is not an official site and can contain mistakes.</p>
+        </div>
+      </main>
   </div>
   <script src="../styles/main.js"></script>
 </body>
