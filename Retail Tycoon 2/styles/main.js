@@ -108,8 +108,12 @@ function setupResponsiveButtons() {
 }
 
 window.addEventListener("load", () => {
-  setTimeout(setupResponsiveButtons, 300);
+  setTimeout(() => {
+    setupResponsiveButtons();
+    showUpdateWarnings(); // 👈 ADD THIS
+  }, 300);
 });
+
 
 function highlightSidebarCategory() {
   const currentPath = window.location.pathname;
@@ -135,5 +139,33 @@ function highlightSidebarCategory() {
         link.classList.add("active-page");
       }
     });
+  });
+}
+
+function showUpdateWarnings() {
+  const container = document.getElementById("update-warnings");
+  if (!container) return;
+
+  const pageMeta = document.querySelector('meta[name="kb-page"]');
+  if (!pageMeta) return;
+
+  const pageId = pageMeta.content;
+
+  Object.entries(KB_UPDATES).forEach(([version, data]) => {
+    const matches = data.pages.some(p =>
+      p.endsWith("*")
+        ? pageId.startsWith(p.replace("*", ""))
+        : pageId === p
+    );
+
+    if (matches) {
+      const warning = document.createElement("div");
+      warning.className = "update-warning";
+      warning.innerHTML = `
+        <strong>⚠ Game update ${version}</strong><br>
+        ${data.message}
+      `;
+      container.appendChild(warning);
+    }
   });
 }
