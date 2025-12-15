@@ -95,19 +95,26 @@ header {
 
 .menu-toggle {
   display: none;
-  background: none;
+  background: var(--bg);
+  border-radius: 5px;
   border: none;
   color: var(--accent);
   font-size: 28px;
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 950px) {
   header {
     justify-content: space-between;
   }
 
   .left {
+    width: 100%;
+    display: contents;
+  }
+
+  .title{
     width: 100%;
   }
 
@@ -117,10 +124,10 @@ header {
 
   .menu-toggle {
     display: inline-block;
-    position: absolute;
     top: 25px;
     left: 20px;
     z-index: 1100;
+    margin: 0 10px 0 10px;
   }
 }
 
@@ -190,13 +197,13 @@ summary:hover {
    SIDEBAR (MOBILE)
 -------------------------------------------------------------- */
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   #sidebar {
     position: fixed;
     top: 90px;
     left: 0;
     width: 250px;
-    height: calc(100% - 80px);
+    height: calc(100% + 50px);
     background: var(--bg);
     transform: translateX(-100%);
     z-index: 1000;
@@ -227,6 +234,7 @@ summary:hover {
     font-size: 25px;
     font-weight: bold;
     width: 100%;
+    box-sizing: border-box;
   }
 
   h3 {
@@ -502,7 +510,7 @@ main {
    MAIN CONTENT (MOBILE)   NEW
 -------------------------------------------------------------- */
 
-@media (max-width: 800px) {
+@media (max-width: 650px) {
 
 .together{  /*sidebar+main*/
   flex-direction: column;
@@ -513,7 +521,7 @@ main {
   display: block;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 0.75vw;
+  padding: 0;
   background-color: var(--bg);
   overflow-y: auto;
   overflow-x: hidden;
@@ -524,13 +532,13 @@ main {
 }
 
   .toptitle{
-    font-size: 65px;
+    font-size: 55px;
     font-weight: bold;
     text-transform: uppercase;
     color: var(--accent);
     text-align: center;
     margin: 23px 0 18px 0;
-    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-width: 0;
   }
 
   .topsummary{
@@ -543,7 +551,7 @@ main {
   }
 
     .topsummarytitle{
-      font-size: 35px;
+      font-size: 25px;
       font-weight: bold;
       text-transform: uppercase;
       color: var(--accent);
@@ -551,7 +559,7 @@ main {
     }
 
     .topsummarycontent{
-      font-size: 23px;
+      font-size: 18px;
       margin: 10px 5px 10px 15px;
     }
 
@@ -569,8 +577,9 @@ main {
   .middlebetweentitle{
     font-size: 33px;
     font-weight: bold;
-    margin: 30px 0 0 10px;
+    margin: 30px 0 0 0;
     clear: both;
+    text-align: center;
   }
 
   hr.betweentitledivider{
@@ -578,23 +587,24 @@ main {
     width: 70%;
     height: 3px;
     border: none;
-    margin: 20px 0 25px 0;
+    margin: 20px auto 25px auto;
   }
 
   .middletextalone{
-    font-size: 23px;
-    margin: 0 15px 0 15px;
+    font-size: 18px;
+    margin: 0 30px 0 30px;
   }
 
   .imagegroup {
     float: none;
     width: 80%;
-    margin-left: 15px;
+    margin-left: 0;
     margin-bottom: 10px;
+    justify-self: center;
   }
 
   .imagegroup img {
-    width: 100%;
+    width: 90%;
     border: 4px solid var(--accent);
     border-radius: 8px;
     margin-top: 10px;    
@@ -712,6 +722,13 @@ main {
   background-color: var(--accent);
 }
 
+@media (max-width: 650px) {
+
+  .faq-buttons{
+    margin: 0 10px 15px 10px;
+  }
+
+}
 
 /* --------------------------------------------------------------
    SCROLLBAR
