@@ -494,6 +494,7 @@ main {
     height: 3px;
     border: none;
     margin: 20px 0 25px 0;    
+    clear: both;
   }  
 
 .bottom{
