@@ -260,6 +260,38 @@ summary:hover {
   }
 }
 
+.sidebar-section {
+  margin-top: 35px;
+}
+
+.sidebar-section-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  margin: 8px 0;
+}
+
+.sidebar-section-title::before,
+.sidebar-section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #444;
+}
+
+.sidebar-section-title span {
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.sidebar-static-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 
 /* --------------------------------------------------------------                        OLD
    MAIN CONTENT (DESKTOP) OLD
