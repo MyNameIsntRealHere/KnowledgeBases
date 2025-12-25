@@ -200,10 +200,10 @@ summary:hover {
 @media (max-width: 950px) {
   #sidebar {
     position: fixed;
-    top: 90px;
+    top: 80px;
     left: 0;
     width: 250px;
-    height: calc(100% + 50px);
+    height: calc(100% - 80px);
     background: var(--bg);
     transform: translateX(-100%);
     z-index: 1000;
