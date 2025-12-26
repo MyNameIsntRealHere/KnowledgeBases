@@ -1,7 +1,7 @@
 const isGitHub = location.hostname === "MyNameIsntRealHere.github.io";
 
 const BASE = isGitHub
-  ? "/KnowledgeBases/Retail Tycoon 2/"
+  ? "/KnowledgeBases/"
   : "../../../";
 
 
