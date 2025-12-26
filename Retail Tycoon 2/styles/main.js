@@ -110,7 +110,7 @@ function setupResponsiveButtons() {
 window.addEventListener("load", () => {
   setTimeout(() => {
     setupResponsiveButtons();
-    showUpdateWarnings(); // 👈 ADD THIS
+    showPageNotices();
   }, 300);
 });
 
@@ -142,7 +142,7 @@ function highlightSidebarCategory() {
   });
 }
 
-function showUpdateWarnings() {
+function showPageNotices() {
   const container = document.getElementById("update-warnings");
   if (!container) return;
 
@@ -151,21 +151,24 @@ function showUpdateWarnings() {
 
   const pageId = pageMeta.content;
 
-  Object.entries(KB_UPDATES).forEach(([version, data]) => {
-    const matches = data.pages.some(p =>
+  KB_NOTICES.forEach(notice => {
+    const matches = notice.pages.some(p =>
       p.endsWith("*")
         ? pageId.startsWith(p.replace("*", ""))
         : pageId === p
     );
 
-    if (matches) {
-      const warning = document.createElement("div");
-      warning.className = "update-warning";
-      warning.innerHTML = `
-        <strong>⚠ Game update ${version}</strong><br>
-        ${data.message}
-      `;
-      container.appendChild(warning);
-    }
+    if (!matches) return;
+
+    const div = document.createElement("div");
+    div.className = `page-notice notice-${notice.type}`;
+
+    div.innerHTML = `
+      <strong>${notice.title}</strong><br>
+      ${notice.message}
+    `;
+
+    container.appendChild(div);
   });
 }
+
