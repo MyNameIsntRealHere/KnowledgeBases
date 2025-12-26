@@ -1,3 +1,10 @@
+const isGitHub = location.hostname === "MyNameIsntRealHere.github.io";
+
+const BASE = isGitHub
+  ? "/KnowledgeBases/Retail Tycoon 2/"
+  : "../../../";
+
+
 // search.js — RT2 Knowledge Base Search
 // Requires Fuse.js to be loaded before this file
 
@@ -14,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Fetch sitemap to discover pages
   let pages = [];
   try {
-    const res = await fetch("../../../sitemap.xml");
+    const res = await fetch(`${BASE}sitemap.xml`);
     const text = await res.text();
 
     const urls = [...text.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1]);

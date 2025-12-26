@@ -34,7 +34,7 @@ const KB_NOTICES = [
     type: "info",
     title: "Loading delay",
     pages: ["search"],
-    message: "It can take a few seconds for the search index to load. Try waiting a moment if no results appear immediately."
+    message: "It can take a few seconds for the search index to load. Try waiting a moment if no results appear immediately. (This will be fixed in one of the following updates.)"
   }
 
 
