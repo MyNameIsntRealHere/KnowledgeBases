@@ -30,11 +30,11 @@ const KB_NOTICES = [
   },
 
   {
-    id: "search-page-delay",
-    type: "info",
-    title: "Loading delay",
+    id: "search-page-broken",
+    type: "update",
+    title: "Search function is broken",
     pages: ["search"],
-    message: "It can take a few seconds for the search index to load. Try waiting a moment if no results appear immediately. (This will be fixed in one of the following updates.)"
+    message: "The search function is currently not working, you can for now use the sidebar to navigate through the site."
   }
 
 
