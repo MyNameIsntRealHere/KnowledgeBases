@@ -421,14 +421,16 @@ main {
 
 #content{   /*onlymain*/
   flex: 1;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px);
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 0.75vw;
   background-color: var(--bg);
   overflow-y: auto;
   overflow-x: hidden;
-}
+} 
 
 .top{
   width: 100%;
@@ -504,7 +506,8 @@ main {
 
 .middle{
   width: 100%;
-}
+  flex: 1;
+} 
 
   .middlebetweentitle{
     font-size: 33px;
@@ -540,22 +543,27 @@ main {
     margin-bottom: 10px;
   }
 
+.bottom-container {
+    clear: both;
+    margin-top: auto;
+}
+
   hr.bottomline{
     background-color: var(--accent);
     height: 3px;
     border: none;
-    margin: 20px 0 25px 0;    
+    margin: 20px 0 25px 0;
     clear: both;
   }  
 
-.bottom{
-  width: 100%;
-}
-
-  .bottomtext{
-    text-align: center;
-    font-weight: bold;
+  .bottom{
+    width: 100%;
   }
+
+    .bottomtext{
+      text-align: center;
+      font-weight: bold;
+    }
 
 
 /* --------------------------------------------------------------
@@ -570,14 +578,16 @@ main {
 
 #content{   /*onlymain*/
   flex: 1;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px);
   max-width: 1000px;
   margin: 0 auto;
   padding: 0;
   background-color: var(--bg);
   overflow-y: auto;
   overflow-x: hidden;
-}
+} 
 
 .top{
   width: 100vw;
@@ -624,7 +634,8 @@ main {
 
 .middle{
   width: 100vw;
-}
+  flex: 1;
+} 
 
   .middlebetweentitle{
     font-size: 33px;
