@@ -2,7 +2,7 @@ const isGitHub = location.hostname === "MyNameIsntRealHere.github.io";
 
 const BASE = isGitHub
   ? "/KnowledgeBases/"
-  : "../../../";
+  : "../../";
 
 
 // search.js — RT2 Knowledge Base Search
