@@ -21,13 +21,6 @@ const KB_NOTICES = [
 //  },
 
 
-  {
-    id: "christmas-event-start",
-    type: "event",
-    title: "The Christmas Event for 2025 is live!",
-    pages: ["events-ac-christmas", "sellables-de-christmas"],
-    message: "The Christmas event has started! Make sure to check it out before it ends!"
-  },
 
   {
     id: "search-page-broken",
