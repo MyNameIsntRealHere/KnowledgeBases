@@ -17,6 +17,9 @@
   <title>Lumber | RT2 KB</title>
   <meta name="kb-page" content="sellables-cm-lumber">
   <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/mini.css">
+  <link rel="stylesheet" href="../styles/small.css">
+  <link rel="stylesheet" href="../styles/middle.css">
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 
@@ -24,9 +27,20 @@
   <header id="header"></header>
   <div class="together">
     <aside id="sidebar"></aside>
-      <main id="content">
+    <main id="content">
+      <header class="sticky-header">
+        <div class="navigation">
+          <button onclick="history.back()" class="stickygroup back-button"><img src="../images/backarrow.svg" alt="Back" class="button-arrow"></button>
+          <button id="menuToggle" class="menu-toggle stickygroup"><img id="menuToggle" src="../images/menubutton.svg" alt="Menu" class="button-arrow"></button>
+        </div>  
+        <div class="stickygroup nav-links">
+          <a class="nav-button" href="index.html">HOME</a>
+          <hr class="divide">
+          <a class="nav-button" href="faq.html">FAQ</a>
+        </div>
+      </header>
 
-        <div class="top">
+      <div class="top">
           <p class="toptitle">Lumber</p>
           <div id="update-warnings"></div>
         </div>

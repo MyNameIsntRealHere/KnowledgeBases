@@ -28,7 +28,14 @@ const KB_NOTICES = [
     title: "Search function is broken",
     pages: ["search"],
     message: "The search function is currently not working, you can for now use the sidebar to navigate through the site."
-  }
+  },
 
+  {
+    id: "test123",
+    type: "update",
+    title: "testink",
+    pages: ["employees-aa-overview"],
+    message: "This is a test notice to see whether the styling on this element is set appropriate (or however you write that)."
+  }
 
 ];

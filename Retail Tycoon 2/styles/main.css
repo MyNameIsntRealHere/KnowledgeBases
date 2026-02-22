@@ -1,6 +1,6 @@
 :root {
-  --bg: #222020;
-  --darkbg: #1B1A1A;
+  --bg: #1B1A1A;
+  --darkbg: #04090C;
   --accent: #009DFF;
   --darkaccent: #1B394D;
 }
@@ -36,18 +36,7 @@ a:hover {
 -------------------------------------------------------------- */
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: #000000;
-  border-bottom: 5px solid var(--accent);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1vw;
-  z-index: 1100;
+  display: none;
 }
 
 .left {
@@ -104,48 +93,45 @@ header {
 }
 
 
-@media (max-width: 950px) {
-  header {
-    justify-content: space-between;
-  }
-
-  .left {
-    width: 100%;
-    display: contents;
-  }
-
-  .title{
-    width: 100%;
-  }
-
-  .headerbuttons {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: inline-block;
-    top: 25px;
-    left: 20px;
-    z-index: 1100;
-    margin: 0 10px 0 10px;
-  }
-}
-
 
 /* --------------------------------------------------------------
    SIDEBAR (DESKTOP)
 -------------------------------------------------------------- */
 
 #sidebar {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  width: 28vw;
-  background: var(--bg);
   color: white;
-  border-right: 3px solid var(--accent);
-  padding: 10px;
-  overflow-y: auto;
   transition: transform 0.3s ease;
   z-index: 900;
+  height: 100vh;
+}
+
+.logo{
+  flex-shrink: 0;
+  width: 33vw;
+  height: 100px;
+  background-color: #000000;
+  position: sticky;
+  z-index: 1000;
+  border-radius: 0 0 30px 0;
+  border-right: 5px solid var(--accent);
+  border-bottom: 5px solid var(--accent);
+  text-align: center;
+  align-content: space-evenly;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.sidebarnav{
+  flex-grow: 1;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  padding: 10px;
+  width: 28vw;
+  border-right: 5px solid var(--accent);
+  background-color: #000000;
 }
 
 .sidebarheader {
@@ -213,29 +199,6 @@ summary:hover {
     transform: translateX(0);
   }
 
-  /* Sidebar version of header buttons */
-  #sidebar .headerbuttons {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 15px;
-    width: 100%;
-    height: auto;
-  }
-
-  #sidebar .headerbutton {
-    background: #000000;
-    border: 4px solid #111;
-    color: #FFFFFF;
-    padding: 8px 12px;
-    margin: 0 0.5vw;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 25px;
-    font-weight: bold;
-    width: 100%;
-    box-sizing: border-box;
-  }
 
   h3 {
   color: #FFFFFF;
@@ -300,9 +263,69 @@ summary:hover {
 .together{  /*sidebar+main*/
   display: flex;
   flex: 1;
-  margin-top: 80px;
   overflow: hidden;
   background-color: var(--darkbg);
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75vw;
+}
+
+.stickygroup {
+  border: 3px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.back-button {
+  background: #000000;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button-arrow {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  margin-inline: auto;
+}
+
+.nav-links {
+  background: #000000;
+  display: flex;
+  height: 60px;
+}
+
+.nav-button{
+  width: 200px;
+  color: white;
+  text-align: center;
+  align-content: space-evenly;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.divide{
+  background-color: var(--bg);
+  width: 1.5px;
+  height: 60%;
+  border: none;
+  margin: 0;
+  align-self: center;
 }
 
 #content{   /*onlymain*/
@@ -315,6 +338,9 @@ summary:hover {
   background-color: var(--bg);
   overflow-y: auto;
   overflow-x: hidden;
+  box-shadow: 0 0 700px var(--accent);
+  border-left: 5px solid var(--accent);
+  border-right: 5px solid var(--accent);
 } 
 
 .top{
@@ -365,18 +391,21 @@ summary:hover {
     .notice-update {
       background: #3a1c1c;
       border-left: 4px solid #e53935;
+      border-top: 4px solid #e53935;
       color: #ffdede;
     }
 
     .notice-event {
       background: #1e3b2a;
       border-left: 4px solid #4caf50;
+      border-top: 4px solid #4caf50;
       color: #d8ffe6;
     }
 
     .notice-info {
       background: #1e2f3b;
       border-left: 4px solid #2196f3;
+      border-top: 4px solid #2196f3;
       color: #e0f1ff;
     }
 
@@ -454,128 +483,6 @@ summary:hover {
 /* --------------------------------------------------------------
    MAIN CONTENT (MOBILE)
 -------------------------------------------------------------- */
-
-@media (max-width: 650px) {
-
-.together{  /*sidebar+main*/
-  flex-direction: column;
-}
-
-#content{   /*onlymain*/
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 80px);
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0;
-  background-color: var(--bg);
-  overflow-y: auto;
-  overflow-x: hidden;
-} 
-
-.top{
-  width: 100vw;
-}
-
-  .toptitle{
-    font-size: 55px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--accent);
-    text-align: center;
-    margin: 23px 0 18px 0;
-    -webkit-text-stroke-width: 0;
-  }
-
-  .topsummary{
-    width: 80%;
-    background-color: var(--darkaccent);
-    border: 4px solid var(--accent);
-    border-radius: 8px;
-    margin: 0 auto;
-
-  }
-
-    .topsummarytitle{
-      font-size: 25px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin: 10px 10px 0 10px;
-    }
-
-    .topsummarycontent{
-      font-size: 18px;
-      margin: 10px 5px 10px 15px;
-    }
-
-  hr.topline{
-    background-color: #000000;
-    height: 5px;
-    border: none;
-    margin: 30px 0 30px 0;
-  }
-
-.middle{
-  width: 100vw;
-  flex: 1;
-} 
-
-  .middlebetweentitle{
-    font-size: 33px;
-    font-weight: bold;
-    margin: 30px 0 0 0;
-    clear: both;
-    text-align: center;
-  }
-
-  hr.betweentitledivider{
-    background-color: var(--darkbg);
-    width: 70%;
-    height: 3px;
-    border: none;
-    margin: 20px auto 25px auto;
-  }
-
-  .middletextalone{
-    font-size: 18px;
-    margin: 0 30px 0 30px;
-  }
-
-  .imagegroup {
-    float: none;
-    width: 80%;
-    margin-left: 0;
-    margin-bottom: 10px;
-    justify-self: center;
-  }
-
-  .imagegroup img {
-    width: 90%;
-    border: 4px solid var(--accent);
-    border-radius: 8px;
-    margin-top: 10px;    
-    margin-bottom: 10px;
-  }
-
-  hr.bottomline{
-    background-color: var(--accent);
-    height: 3px;
-    border: none;
-    margin: 20px 0 25px 0;    
-  }  
-
-.bottom{
-  width: 100%;
-}
-
-  .bottomtext{
-    text-align: center;
-    font-weight: bold;
-  }
-
-}
 
 /* --------------------------------------------------------------
    TABLE STYLING

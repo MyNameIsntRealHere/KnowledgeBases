@@ -91,7 +91,7 @@ function setupResponsiveButtons() {
   if (!headerButtons || !sidebar) return;
 
   function moveButtons() {
-    if (window.innerWidth <= 950) {
+    if (window.innerWidth <= 550) {
       if (!sidebar.contains(headerButtons)) {
         sidebar.prepend(headerButtons);
       }
